@@ -1,9 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import { renderToStaticMarkup } from 'react-dom/server';
 
-import { Hello } from './Hello'
+import { Hello } from './Hello';
 
-ReactDOM.render(
-  <Hello/>,
-  document.getElementById('root')
-)
+console.log(renderToStaticMarkup(
+  Hello,
+))
